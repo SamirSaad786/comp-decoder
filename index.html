@@ -1154,6 +1154,60 @@ footer a { color:var(--accent3);text-decoration:none; }
   text-decoration: none;
 }
 
+/* GLOSSARY PAGE */
+.landing-glossary {
+  min-height: calc(100vh - 70px);
+  padding: 4rem 2rem;
+  overflow-y: auto;
+}
+.glossary-intro {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text2);
+  margin-top: 1rem;
+}
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.glossary-category {
+  background: var(--s2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.glossary-category h3 {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.glossary-term {
+  margin-bottom: 1rem;
+}
+.glossary-term:last-child {
+  margin-bottom: 0;
+}
+.glossary-term dt {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+.glossary-term dd {
+  font-size: 0.85rem;
+  color: var(--text2);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* PAGE CTA */
 .page-cta {
   display: flex;
@@ -1197,6 +1251,7 @@ footer a { color:var(--accent3);text-decoration:none; }
   <nav class="nav-links">
     <a onclick="showPage('how')" data-page="how">How It Works</a>
     <a onclick="showPage('features')" data-page="features">Features</a>
+    <a onclick="showPage('glossary')" data-page="glossary">Glossary</a>
     <a onclick="showPage('why')" data-page="why">Why Free</a>
   </nav>
   <div class="btn-launch" onclick="showPage('tool')">Launch Tool →</div>
@@ -1308,6 +1363,131 @@ footer a { color:var(--accent3);text-decoration:none; }
       </div>
       <div class="page-cta">
         <div class="btn-primary" onclick="showPage('tool')">Try It Now →</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE: GLOSSARY
+═══════════════════════════════════════════════════════════════ -->
+<div class="landing-page" id="page-glossary">
+  <section class="landing-glossary">
+    <div class="landing-section-inner">
+      <div class="landing-section-header">
+        <div class="landing-section-eyebrow">Know the Terms</div>
+        <h2>Compensation Glossary</h2>
+        <p class="glossary-intro">Don't let HR jargon confuse you. Here's what everything actually means.</p>
+      </div>
+      
+      <div class="glossary-grid">
+        <div class="glossary-category">
+          <h3>💰 Base Pay</h3>
+          <div class="glossary-term">
+            <dt>Base Salary</dt>
+            <dd>Your guaranteed annual pay before taxes. This is the fixed amount you'll receive regardless of performance. It's the foundation of your compensation.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Total Compensation (TC)</dt>
+            <dd>Everything combined: base salary + bonus + equity + benefits. This is the real number to compare when evaluating offers. A $120k base with $40k in equity beats a $140k base with nothing else.</dd>
+          </div>
+        </div>
+
+        <div class="glossary-category">
+          <h3>🎯 Bonuses</h3>
+          <div class="glossary-term">
+            <dt>Target Bonus</dt>
+            <dd>A bonus amount you're expected to receive if you and the company hit goals. Usually expressed as a % of base salary (e.g., "15% target bonus"). Not guaranteed — actual payout depends on performance.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Guaranteed Bonus</dt>
+            <dd>A bonus you will definitely receive, regardless of performance. Rare, but sometimes offered in the first year to offset leaving money behind at your previous job.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Discretionary Bonus</dt>
+            <dd>A bonus your manager can choose to give you. No set amount or guarantee — entirely up to the company's discretion. The least reliable type of bonus.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Sign-on Bonus</dt>
+            <dd>A one-time payment when you join. Often used to offset unvested equity or bonuses you're leaving behind. Usually requires you to stay 1-2 years or pay it back.</dd>
+          </div>
+        </div>
+
+        <div class="glossary-category">
+          <h3>📈 Equity & Stock</h3>
+          <div class="glossary-term">
+            <dt>RSUs (Restricted Stock Units)</dt>
+            <dd>Shares of company stock given to you over time. Once they "vest," they're yours to keep or sell. At public companies, RSUs have clear cash value. At private companies, value is uncertain until an IPO or acquisition.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Stock Options</dt>
+            <dd>The right to BUY shares at a set price (the "strike price"). Common at startups. Options only have value if the company's stock price rises above your strike price. Riskier than RSUs but potentially more upside.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Vesting Schedule</dt>
+            <dd>How your equity is released to you over time. A "4-year vest" means you get your shares gradually over 4 years. This keeps you at the company — leave early and you forfeit unvested shares.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Cliff</dt>
+            <dd>A waiting period before any equity vests. A "1-year cliff" means you get nothing if you leave before 12 months. After the cliff, a chunk vests at once, then the rest vests monthly or quarterly.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Grant Value</dt>
+            <dd>The total dollar value of your equity award. For RSUs, this is shares × current stock price. For options, it's the potential value if the stock rises. Divide by vesting years to get annual equity value.</dd>
+          </div>
+        </div>
+
+        <div class="glossary-category">
+          <h3>🏥 Benefits</h3>
+          <div class="glossary-term">
+            <dt>401(k) Match</dt>
+            <dd>Free money from your employer when you contribute to retirement. "6% match" means if you put in 6% of your salary, they add another 6%. This is pure extra compensation — always max it out.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>PTO (Paid Time Off)</dt>
+            <dd>Days you can take off while still getting paid. Includes vacation, sick days, and personal days. "Unlimited PTO" sounds great but often means no payout when you leave and guilt about taking time off.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Health Premium</dt>
+            <dd>Your monthly cost for health insurance. Companies pay most of it; your share is deducted from your paycheck. Lower premiums = more take-home pay.</dd>
+          </div>
+        </div>
+
+        <div class="glossary-category">
+          <h3>📊 Market Terms</h3>
+          <div class="glossary-term">
+            <dt>Percentile (P25, P50, P75)</dt>
+            <dd>Where your pay ranks compared to others. P50 (50th percentile) is the median — half earn more, half earn less. P75 means you're paid more than 75% of people in similar roles. Below P50 = underpaid.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Pay Band / Salary Range</dt>
+            <dd>The min-to-max salary a company has budgeted for a role. Recruiters often won't share this, but pay transparency laws are changing that. Your goal: find out the band and aim for the upper half.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Pay Transparency Law</dt>
+            <dd>State laws requiring employers to disclose salary ranges. In NY, CA, CO, and WA, companies MUST post salary ranges in job listings. This gives you leverage — you can see if their offer is at the bottom of the band.</dd>
+          </div>
+        </div>
+
+        <div class="glossary-category">
+          <h3>🤝 Negotiation Terms</h3>
+          <div class="glossary-term">
+            <dt>Counter Offer</dt>
+            <dd>When you respond to their offer with a higher number. This is negotiation — not rude, not greedy. 87% of employers expect it and won't rescind the offer.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Competing Offer</dt>
+            <dd>Another job offer you can use as leverage. The most powerful negotiation tool. Even if you prefer Company A, a signed offer from Company B gives you proof of your market value.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Exploding Offer</dt>
+            <dd>An offer with a very short deadline (e.g., "decide by Friday"). A pressure tactic. It's usually okay to push back and ask for more time — good companies understand big decisions take time.</dd>
+          </div>
+        </div>
+      </div>
+      
+      <div class="page-cta">
+        <div class="btn-primary" onclick="showPage('tool')">Decode Your Offer →</div>
       </div>
     </div>
   </section>
@@ -1463,9 +1643,9 @@ footer a { color:var(--accent3);text-decoration:none; }
         <div class="fg">
           <label>Bonus Type</label>
           <select id="bonusType">
-            <option value="guaranteed">Guaranteed</option>
-            <option value="target" selected>Target (at-risk)</option>
-            <option value="discretionary">Discretionary</option>
+            <option value="guaranteed">Guaranteed (paid no matter what)</option>
+            <option value="target" selected>Target (depends on performance)</option>
+            <option value="discretionary">Discretionary (manager decides)</option>
           </select>
         </div>
       </div>
@@ -1486,11 +1666,11 @@ footer a { color:var(--accent3);text-decoration:none; }
     <div class="acc-body">
       <div class="row2">
         <div class="fg">
-          <label>Company Type</label>
+          <label>Equity Type</label>
           <select id="equityType">
-            <option value="public">Public (RSUs)</option>
-            <option value="private">Private (Options)</option>
-            <option value="none" selected>No Equity</option>
+            <option value="public">Public Company Stock (RSUs)</option>
+            <option value="private">Startup/Private (Stock Options)</option>
+            <option value="none" selected>No Equity Offered</option>
           </select>
         </div>
         <div class="fg">
@@ -1500,20 +1680,20 @@ footer a { color:var(--accent3);text-decoration:none; }
       </div>
       <div class="row2">
         <div class="fg">
-          <label>Vest Period (years)</label>
+          <label>Vesting Schedule</label>
           <select id="vestPeriod">
-            <option value="4" selected>4 Years</option>
+            <option value="4" selected>4 Years (standard)</option>
             <option value="3">3 Years</option>
-            <option value="2">2 Years</option>
-            <option value="1">1 Year</option>
+            <option value="2">2 Years (accelerated)</option>
+            <option value="1">1 Year (immediate)</option>
           </select>
         </div>
         <div class="fg">
-          <label>Cliff</label>
+          <label>Vesting Cliff</label>
           <select id="cliff">
-            <option value="1" selected>1-Year Cliff</option>
-            <option value="0">No Cliff</option>
-            <option value="2">2-Year Cliff</option>
+            <option value="1" selected>1-Year Cliff (nothing until year 1)</option>
+            <option value="0">No Cliff (vest from day 1)</option>
+            <option value="2">2-Year Cliff (nothing until year 2)</option>
           </select>
         </div>
       </div>
@@ -1561,12 +1741,12 @@ footer a { color:var(--accent3);text-decoration:none; }
     </div>
     <div class="acc-body">
       <div class="fg">
-        <label>Competing Offers</label>
+        <label>Do You Have Competing Offers?</label>
         <select id="competing">
-          <option value="none">None currently</option>
-          <option value="interviewing">Actively interviewing elsewhere</option>
-          <option value="pending">Offer pending at another company</option>
-          <option value="concrete">Signed offer in hand</option>
+          <option value="none">No — this is my only offer</option>
+          <option value="interviewing">Maybe — actively interviewing elsewhere</option>
+          <option value="pending">Likely — expecting another offer soon</option>
+          <option value="concrete">Yes — I have a signed offer from another company</option>
         </select>
       </div>
       <div class="fg">
@@ -1578,21 +1758,21 @@ footer a { color:var(--accent3);text-decoration:none; }
         </div>
       </div>
       <div class="fg">
-        <label>Negotiation Experience</label>
+        <label>Your Negotiation Experience</label>
         <select id="negExp">
-          <option value="never">Never negotiated before</option>
-          <option value="once">Negotiated once</option>
-          <option value="experienced" selected>Negotiated successfully before</option>
-          <option value="pro">Negotiate regularly</option>
+          <option value="never">First time — never negotiated salary</option>
+          <option value="once">Tried once — asked for more before</option>
+          <option value="experienced" selected>Experienced — successfully negotiated before</option>
+          <option value="pro">Pro — negotiate regularly in my role</option>
         </select>
       </div>
       <div class="fg">
-        <label>Pay Transparency (your state)</label>
+        <label>Pay Transparency Law (your state)</label>
         <select id="payTransState">
-          <option value="strong">Strong Law (NY, CA, CO, WA)</option>
-          <option value="moderate">Moderate Law (CT, NV, MD)</option>
+          <option value="strong">Strong Law — must disclose salary (NY, CA, CO, WA)</option>
+          <option value="moderate">Moderate Law — disclose upon request (CT, NV, MD)</option>
           <option value="pending">Pending / Partial Law</option>
-          <option value="none" selected>No Law</option>
+          <option value="none" selected>No Law — employer not required to disclose</option>
         </select>
       </div>
     </div>
