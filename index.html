@@ -2506,13 +2506,21 @@ Keep it conversational, specific to THEIR situation, and actionable. No generic 
   try {
     const response = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "anthropic-version": "2023-06-01"
+      },
       body: JSON.stringify({
         model: "claude-sonnet-4-20250514",
         max_tokens: 500,
+        system: "You are an expert salary negotiation coach. Be specific, direct, and actionable. Speak to the person's exact situation.",
         messages: [{ role: "user", content: prompt }]
       })
     });
+
+    if (!response.ok) {
+      throw new Error(`API error ${response.status}`);
+    }
 
     const data = await response.json();
     const aiText = data.content?.[0]?.text || "Unable to generate advice at this time.";
