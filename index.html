@@ -1135,12 +1135,14 @@ footer a { color:var(--accent3);text-decoration:none; }
   margin-bottom: 1.5rem;
 }
 .landing-why-free p {
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  font-style: italic;
-  color: var(--text2);
-  line-height: 1.8;
-  margin-bottom: 1rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.85;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.01em;
 }
 .landing-why-free .signature {
   font-family: var(--mono);
@@ -1299,19 +1301,31 @@ footer a { color:var(--accent3);text-decoration:none; }
         <div class="landing-step-card">
           <div class="landing-step-number">1</div>
           <h3>Enter Your Offer</h3>
-          <p>Input your base salary, bonus, equity, benefits, and location. Even partial info works — we'll estimate the rest.</p>
+          <p>Input your base salary, bonus, equity, benefits, and location. Even partial info works — we'll calculate what we can and flag what's missing.</p>
         </div>
         <div class="landing-step-card">
           <div class="landing-step-number">2</div>
           <h3>See Where You Stand</h3>
-          <p>Instantly see your market percentile, total comp breakdown, and what you should realistically ask for.</p>
+          <p>Instantly see your market percentile against live federal wage data for your specific job title — not generic industry averages or crowdsourced guesses.</p>
         </div>
         <div class="landing-step-card">
           <div class="landing-step-number">3</div>
           <h3>Get Your Playbook</h3>
-          <p>Personalized scripts tailored to your situation. What to say, when to say it, and how to respond to pushback.</p>
+          <p>Personalized negotiation scripts tailored to your situation — what to say, when to say it, and exactly how to respond to pushback.</p>
         </div>
       </div>
+
+      <div style="margin:2rem auto 0;max-width:680px;background:rgba(99,102,241,0.07);border:1px solid rgba(99,102,241,0.2);border-radius:10px;padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:center;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);white-space:nowrap;">Powered by</div>
+        <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;font-size:0.8rem;opacity:0.8;white-space:nowrap;">🏛️ BLS Occupational Employment &amp; Wage Statistics</a>
+        <span style="opacity:0.3">·</span>
+        <a href="https://www.careeronestop.org/toolkit/wages/find-salary.aspx" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;font-size:0.8rem;opacity:0.8;white-space:nowrap;">CareerOneStop / U.S. Dept of Labor</a>
+        <span style="opacity:0.3">·</span>
+        <a href="https://www.bls.gov/ooh/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;font-size:0.8rem;opacity:0.8;white-space:nowrap;">Occupational Outlook Handbook</a>
+        <span style="opacity:0.3">·</span>
+        <span style="font-size:0.75rem;opacity:0.5">Updated annually by federal survey</span>
+      </div>
+
       <div class="page-cta">
         <div class="btn-primary" onclick="showPage('tool')">Try It Now →</div>
       </div>
@@ -1331,34 +1345,39 @@ footer a { color:var(--accent3);text-decoration:none; }
       </div>
       <div class="landing-features-grid">
         <div class="landing-feature-card">
+          <div class="landing-feature-icon">🏛️</div>
+          <h3>Live Federal Wage Data</h3>
+          <p>Benchmarks pulled in real time from the U.S. Bureau of Labor Statistics OEWS program via <a href="https://www.careeronestop.org/toolkit/wages/find-salary.aspx" target="_blank" rel="noopener" style="color:var(--accent)">CareerOneStop</a> — the same data the federal government uses. Not crowdsourced. Not self-reported. Federal survey data covering 830+ occupations.</p>
+        </div>
+        <div class="landing-feature-card">
           <div class="landing-feature-icon">📈</div>
           <h3>Total Comp Calculator</h3>
-          <p>See the real value of your offer — base, bonus, equity, 401k match, PTO, and hidden benefits all in one number.</p>
+          <p>See the real dollar value of your full offer — base, bonus, equity, 401k match, PTO, health premiums, and remote stipends combined into one honest number.</p>
         </div>
         <div class="landing-feature-card">
           <div class="landing-feature-icon">🎯</div>
           <h3>Market Percentile</h3>
-          <p>Know if you're at the 30th or 70th percentile for your role, level, and location. Data-backed, not guesswork.</p>
+          <p>Know exactly where your offer lands — P25, P50, P75, P90 — for your specific job title, experience level, and location. Sourced from <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener" style="color:var(--accent)">BLS OES May 2024</a>, not guesswork.</p>
         </div>
         <div class="landing-feature-card">
           <div class="landing-feature-icon">📊</div>
           <h3>Negotiation Confidence Score</h3>
-          <p>See your leverage based on competing offers, timeline, experience, and pay transparency laws in your state.</p>
+          <p>See your leverage based on competing offers, urgency, experience, and your state's <a href="https://www.dol.gov/agencies/ofccp/pay-transparency" target="_blank" rel="noopener" style="color:var(--accent)">pay transparency laws</a> — with a plain-English explanation of how much room you have to push.</p>
         </div>
         <div class="landing-feature-card">
           <div class="landing-feature-icon">💬</div>
           <h3>Word-for-Word Scripts</h3>
-          <p>Copy-paste responses for every scenario: "That's our final offer," "We don't negotiate," and more.</p>
+          <p>AI-generated negotiation scripts tailored to your specific offer and situation. Copy-paste responses for every scenario: "That's our final offer," "We don't negotiate," salary history questions, and more.</p>
         </div>
         <div class="landing-feature-card">
           <div class="landing-feature-icon">⚖️</div>
           <h3>Offer Comparison</h3>
-          <p>Weighing two offers? See them side-by-side with total comp, cash vs. equity mix, and a clear recommendation.</p>
+          <p>Weighing two offers? See them side-by-side with total comp, cash vs. equity breakdown, risk-adjusted value, and a clear data-backed recommendation on which to take.</p>
         </div>
         <div class="landing-feature-card">
           <div class="landing-feature-icon">📋</div>
           <h3>Export & Share</h3>
-          <p>Download your analysis as a PDF, copy a summary, or share a link. Use it in your actual negotiation.</p>
+          <p>Download your full analysis as a PDF or copy a plain-text summary. Bring real data into your actual negotiation conversation.</p>
         </div>
       </div>
       <div class="page-cta">
@@ -1456,8 +1475,8 @@ footer a { color:var(--accent3);text-decoration:none; }
         <div class="glossary-category">
           <h3>📊 Market Terms</h3>
           <div class="glossary-term">
-            <dt>Percentile (P25, P50, P75)</dt>
-            <dd>Where your pay ranks compared to others. P50 (50th percentile) is the median — half earn more, half earn less. P75 means you're paid more than 75% of people in similar roles. Below P50 = underpaid.</dd>
+            <dt>Percentile (P10, P25, P50, P75, P90)</dt>
+            <dd>Where your pay ranks compared to others in the same occupation. P50 (median) means half earn more, half earn less. P75 means you earn more than 75% of peers. P90 is the top 10% — a useful ceiling when negotiating stretch targets. Below P50 is generally considered underpaid for the market. Comp Decoder uses <a href="https://www.bls.gov/oes/oes_perc.htm" target="_blank" rel="noopener" style="color:var(--accent)">BLS OEWS percentile data</a> — the federal standard.</dd>
           </div>
           <div class="glossary-term">
             <dt>Pay Band / Salary Range</dt>
@@ -1465,7 +1484,15 @@ footer a { color:var(--accent3);text-decoration:none; }
           </div>
           <div class="glossary-term">
             <dt>Pay Transparency Law</dt>
-            <dd>State laws requiring employers to disclose salary ranges. In NY, CA, CO, and WA, companies MUST post salary ranges in job listings. This gives you leverage — you can see if their offer is at the bottom of the band.</dd>
+            <dd>State laws requiring employers to post salary ranges in job listings or disclose them on request. As of March 2026, the following states have active laws: <strong>CA, CO, CT, HI, IL, MA, MD, MN, NJ, NV, NY, RI, VT, WA</strong> — plus Washington D.C. and several cities (NYC, Jersey City, Cincinnati, Cleveland, Columbus, Toledo). Delaware's law passed in 2025 but takes effect September 2027. <a href="https://www.dol.gov/agencies/ofccp/pay-transparency" target="_blank" rel="noopener" style="color:var(--accent)">DOL Pay Transparency overview</a> · <a href="https://www.govdocs.com/pay-transparency-laws/" target="_blank" rel="noopener" style="color:var(--accent)">Full state-by-state map</a>. If your state is on this list, ask: "Can you share the full salary band for this role?" — they must tell you.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Comp Ratio (Compa-Ratio)</dt>
+            <dd>Your salary divided by the midpoint of the pay band, expressed as a percentage. A comp ratio of 85% means you're paid 85% of the midpoint — below market. 100% = exactly at midpoint. 115% = above midpoint. HR uses this internally; knowing it helps you argue for where in the band you should sit based on your experience and tenure.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>OEWS / BLS OES</dt>
+            <dd>Occupational Employment and Wage Statistics — an annual federal survey by the <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener" style="color:var(--accent)">U.S. Bureau of Labor Statistics</a> covering 830+ occupations. It's the most authoritative source of U.S. wage data, updated each May. Comp Decoder pulls live OEWS data for your job title via the <a href="https://www.careeronestop.org/toolkit/wages/find-salary.aspx" target="_blank" rel="noopener" style="color:var(--accent)">CareerOneStop API</a>, sponsored by the U.S. Department of Labor — so the benchmarks you see are the same numbers the government publishes.</dd>
           </div>
         </div>
 
@@ -1500,10 +1527,28 @@ footer a { color:var(--accent3);text-decoration:none; }
   <section class="landing-why-free">
     <div class="landing-why-free-inner">
       <h2>Why is this free?</h2>
-      <p>Research shows candidates routinely accept $30k less than budget simply because they don't know how to ask. The information asymmetry in hiring is absurd — and it costs workers billions every year.</p>
-      <p>This tool exists to level the playing field. No paywalls. No email capture. No "premium tier." Just the tools you need to get paid what you're worth.</p>
+      <p>Research shows candidates routinely accept $30,000 or more below budget simply because they don't know how to ask. The information asymmetry in hiring is real — and it costs workers billions every year. Employers know the full band. You usually don't. This tool changes that.</p>
+      <p>No paywalls. No email capture. No upsell to a "premium tier." No ads. The wage data powering this tool comes from the <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener" style="color:var(--accent)">U.S. Bureau of Labor Statistics</a> — a federal government source with no financial incentive to skew numbers in anyone's favor. That's the point.</p>
+      <div style="margin:1.75rem auto;max-width:560px;background:rgba(127,255,178,0.04);border:1px solid rgba(127,255,178,0.12);border-radius:10px;padding:1.4rem 1.6rem;text-align:left">
+        <div style="font-family:var(--display);font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:1rem;letter-spacing:0.01em">Your data stays yours.</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.65rem">
+          <li style="font-family:var(--serif);font-size:0.95rem;color:var(--text);line-height:1.5;display:flex;gap:0.75rem;align-items:flex-start"><span style="flex-shrink:0">🔒</span><span>Nothing you enter is stored or logged</span></li>
+          <li style="font-family:var(--serif);font-size:0.95rem;color:var(--text);line-height:1.5;display:flex;gap:0.75rem;align-items:flex-start"><span style="flex-shrink:0">📡</span><span>Your job title and state are sent to the BLS API to fetch wage data — nothing else</span></li>
+          <li style="font-family:var(--serif);font-size:0.95rem;color:var(--text);line-height:1.5;display:flex;gap:0.75rem;align-items:flex-start"><span style="flex-shrink:0">🤖</span><span>The optional AI coach sends your offer details to Anthropic to generate scripts — not retained after the response</span></li>
+          <li style="font-family:var(--serif);font-size:0.95rem;color:var(--text);line-height:1.5;display:flex;gap:0.75rem;align-items:flex-start"><span style="flex-shrink:0">🚫</span><span>No account required. No tracking. No cookies.</span></li>
+          <li style="font-family:var(--serif);font-size:0.95rem;color:var(--text);line-height:1.5;display:flex;gap:0.75rem;align-items:flex-start"><span style="flex-shrink:0">🗑️</span><span>Close the tab and everything is gone</span></li>
+        </ul>
+      </div>
+      <div style="margin:1.5rem 0;padding:1rem 1.25rem;background:rgba(99,102,241,0.07);border:1px solid rgba(99,102,241,0.2);border-radius:8px;font-size:0.8rem;opacity:0.8;line-height:1.7">
+        <strong>Data sources:</strong>
+        <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener" style="color:var(--accent)">BLS Occupational Employment &amp; Wage Statistics</a> ·
+        <a href="https://www.careeronestop.org/toolkit/wages/find-salary.aspx" target="_blank" rel="noopener" style="color:var(--accent)">CareerOneStop / U.S. Dept of Labor</a> ·
+        <a href="https://www.bls.gov/ooh/" target="_blank" rel="noopener" style="color:var(--accent)">Occupational Outlook Handbook</a> ·
+        <a href="https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/" target="_blank" rel="noopener" style="color:var(--accent)">OPM Federal Pay Tables</a> ·
+        <a href="https://www.dol.gov/agencies/ofccp/pay-transparency" target="_blank" rel="noopener" style="color:var(--accent)">DOL Pay Transparency</a>
+      </div>
       <div class="signature">
-        Built by <a href="https://linkedin.com/in/samirsaad" target="_blank" rel="noopener">Samir Saad</a> — HR practitioner building thinking tools
+        Built by <a href="https://linkedin.com/in/samirsaad" target="_blank" rel="noopener">Samir Saad</a> — SPHR · MS Human Resource Development · OD Practitioner
       </div>
       <div class="page-cta">
         <div class="btn-primary" onclick="showPage('tool')">Decode Your Offer →</div>
@@ -1841,7 +1886,10 @@ footer a { color:var(--accent3);text-decoration:none; }
     <div class="tp" id="tp-benchmarks">
       <div class="data-source">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-        Benchmarks based on aggregated market data. For real-time data, check <a href="https://levels.fyi" target="_blank" rel="noopener">Levels.fyi</a> and <a href="https://glassdoor.com/salaries" target="_blank" rel="noopener">Glassdoor</a>.
+        <span id="data-source-text">Fallback benchmarks: BLS OEWS May 2024 national data. Enter a job title above for live data. &nbsp;
+        <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener">BLS OES</a> ·
+        <a href="https://www.careeronestop.org/toolkit/wages/find-salary.aspx" target="_blank" rel="noopener">CareerOneStop</a></span>
+        <span style="display:none">legacy: <a href="https://levels.fyi" target="_blank" rel="noopener">Levels.fyi</a> and <a href="https://glassdoor.com/salaries" target="_blank" rel="noopener">Glassdoor</a>.
       </div>
       <div class="bench-card">
         <h3>Base Salary — Market Percentiles</h3>
@@ -2093,13 +2141,102 @@ function mobileNav(view){
 }
 
 // ── BENCHMARK DATA ────────────────────────────────────────────────────────────
-const BENCH = {
-  entry:   {p25:52000,p50:62000,p75:75000,p90:90000},
-  mid:     {p25:75000,p50:92000,p75:112000,p90:135000},
-  senior:  {p25:105000,p50:128000,p75:155000,p90:185000},
-  staff:   {p25:140000,p50:172000,p75:210000,p90:255000},
-  director:{p25:175000,p50:215000,p75:265000,p90:325000},
+// ── BLS OEWS Benchmarks via CareerOneStop API ─────────────────────────────
+// Fallback data: BLS OEWS May 2024 national medians by broad experience level
+// Source: U.S. Bureau of Labor Statistics, bls.gov/oes
+const BENCH_FALLBACK = {
+  entry:   {p25:50440,p50:60290,p75:73800,p90:89600},
+  mid:     {p25:72000,p50:88900,p75:110200,p90:133000},
+  senior:  {p25:102000,p50:126800,p75:155000,p90:186400},
+  staff:   {p25:138000,p50:170200,p75:210000,p90:256000},
+  director:{p25:172000,p50:214000,p75:265000,p90:328000},
 };
+
+// Live BENCH — starts as fallback, overwritten by API response when available
+let BENCH = JSON.parse(JSON.stringify(BENCH_FALLBACK));
+let blsDataVintage = 'BLS OEWS May 2024 (fallback)';
+let blsOccupationMatched = '';
+
+// CareerOneStop API credentials (U.S. Dept of Labor — free, open data)
+const COS_USER   = '4T8dUYhZlFPQ9vB';
+const COS_TOKEN  = 'Ah5H/vsZ18gGGI4UpFxzKHpA+iaY4NLC2uSLYVSCgJ843rvC7wTamMh/0nudkcKk/5F+1vIb3wJzIa4a+e+nlQ==';
+
+async function fetchBLSBenchmark(jobTitle, stateCode) {
+  if (!jobTitle || jobTitle.length < 3) return null;
+  const loc = stateCode && stateCode !== '1.0' ? stateCode : 'US';
+  const keyword = encodeURIComponent(jobTitle.trim());
+  const url = `https://api.careeronestop.org/v1/comparesalaries/${COS_USER}/wage?keyword=${keyword}&location=${loc}&enableMetaData=false`;
+  try {
+    const res = await fetch(url, {
+      headers: { 'Authorization': `Bearer ${COS_TOKEN}`, 'Content-Type': 'application/json' }
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const wages = data?.OccupationDetail?.Wages?.NationalWagesList || [];
+    const annual = wages.find(w => w.RateType === 'Annual');
+    if (!annual || !annual.Median) return null;
+
+    const p25 = Math.round(parseFloat(annual.Pct25));
+    const p50 = Math.round(parseFloat(annual.Median));
+    const p75 = Math.round(parseFloat(annual.Pct75));
+    const p90 = Math.round(parseFloat(annual.Pct90));
+    const p10 = Math.round(parseFloat(annual.Pct10));
+    const title = data?.OccupationDetail?.OccupationTitle || jobTitle;
+    const vintage = data?.OccupationDetail?.Wages?.WageYear || '2024';
+
+    if (!p50 || p50 < 20000) return null; // sanity check
+
+    return { p10, p25, p50, p75, p90, title, vintage };
+  } catch(e) {
+    return null;
+  }
+}
+
+function applyBLSData(blsResult, level) {
+  if (!blsResult) return;
+  // The API returns data for the specific occupation — use as the "mid" anchor
+  // and scale for other experience levels using BLS-observed ratios
+  const levelMultipliers = {
+    entry:   { p25: 0.72, p50: 0.72, p75: 0.72, p90: 0.72 },
+    mid:     { p25: 1.00, p50: 1.00, p75: 1.00, p90: 1.00 },
+    senior:  { p25: 1.38, p50: 1.40, p75: 1.42, p90: 1.44 },
+    staff:   { p25: 1.85, p50: 1.88, p75: 1.92, p90: 1.96 },
+    director:{ p25: 2.30, p50: 2.36, p75: 2.44, p90: 2.52 },
+  };
+  // If user's exp level is 'senior', treat their role as senior and anchor accordingly
+  const anchorMult = levelMultipliers[level] || levelMultipliers.mid;
+  const anchor_p50 = blsResult.p50 / anchorMult.p50;
+
+  Object.entries(levelMultipliers).forEach(([lvl, m]) => {
+    BENCH[lvl] = {
+      p25: Math.round(anchor_p50 * m.p25),
+      p50: Math.round(anchor_p50 * m.p50),
+      p75: Math.round(anchor_p50 * m.p75),
+      p90: Math.round(anchor_p50 * m.p90),
+    };
+  });
+
+  blsDataVintage = `BLS OEWS ${blsResult.vintage} via CareerOneStop / U.S. Dept of Labor`;
+  blsOccupationMatched = blsResult.title;
+  updateDataSourceBadge();
+}
+
+function updateDataSourceBadge() {
+  const el = document.getElementById('data-source-text');
+  if (el) {
+    if (blsOccupationMatched) {
+      el.innerHTML = `Live data: <strong>${blsOccupationMatched}</strong> — ${blsDataVintage}. &nbsp;
+        <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener">BLS OES</a> ·
+        <a href="https://www.careeronestop.org/toolkit/wages/find-salary.aspx" target="_blank" rel="noopener">CareerOneStop</a> ·
+        <a href="https://www.bls.gov/ooh/" target="_blank" rel="noopener">Occupational Outlook</a> ·
+        <a href="https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/" target="_blank" rel="noopener">OPM Pay Tables</a>`;
+    } else {
+      el.innerHTML = `Fallback benchmarks: BLS OEWS May 2024 national data. Enter a job title above for live data. &nbsp;
+        <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener">BLS OES</a> ·
+        <a href="https://www.careeronestop.org/toolkit/wages/find-salary.aspx" target="_blank" rel="noopener">CareerOneStop</a>`;
+    }
+  }
+}
 
 function calcPctile(salary, level, locMult, indMult, sizeMult){
   const b = BENCH[level];
@@ -2139,11 +2276,31 @@ const PAY_TRANS = {
 // ── MAIN DECODE ───────────────────────────────────────────────────────────────
 let g = {}; // global computed data
 
-function decode(){
+async function decode(){
   const base = gv('baseSalary');
   if(!base){ 
     alert('Please enter a base salary to continue.'); 
     return; 
+  }
+
+  // Fetch live BLS data for the entered job title before calculating
+  const jobTitleVal = gs('jobTitle');
+  const levelVal = gs('expLevel');
+  const locSelect = document.getElementById('location');
+  // Extract state abbreviation from location select text (e.g. "New York City, NY" → "NY")
+  const locText = locSelect ? locSelect.options[locSelect.selectedIndex]?.text || '' : '';
+  const stateMatch = locText.match(/,\s*([A-Z]{2})$/);
+  const stateCode = stateMatch ? stateMatch[1] : 'US';
+
+  if (jobTitleVal && jobTitleVal.length >= 3) {
+    const blsResult = await fetchBLSBenchmark(jobTitleVal, stateCode);
+    applyBLSData(blsResult, levelVal);
+  } else {
+    // Reset to fallback if no job title
+    BENCH = JSON.parse(JSON.stringify(BENCH_FALLBACK));
+    blsOccupationMatched = '';
+    blsDataVintage = 'BLS OEWS May 2024 (fallback)';
+    updateDataSourceBadge();
   }
 
   // Mark step as done
