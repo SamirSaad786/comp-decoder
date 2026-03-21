@@ -1971,6 +1971,9 @@ footer a { color:var(--accent3);text-decoration:none; }
 </footer>
 
 <script>
+// Safe HTML escaping to prevent XSS from user-entered text in innerHTML
+function escHtml(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
 // ══════════════════════════════════════════════════════════════════════════════
 // COMP DECODER — Core Logic
 // ══════════════════════════════════════════════════════════════════════════════
@@ -2545,13 +2548,13 @@ Keep it conversational, specific to THEIR situation, and actionable. No generic 
 
 // ── COMPARE OFFERS ────────────────────────────────────────────────────────────
 function compareOffers(){
-  const o1title = g.jobTitle || 'Offer 1';
+  const o1title = escHtml(g.jobTitle || 'Offer 1');
   const o1base = g.base;
   const o1bonus = g.bonusAnnual;
   const o1equity = g.equityAnn;
   const o1total = g.totalComp;
 
-  const o2title = gs('o2title') || 'Offer 2';
+  const o2title = escHtml(gs('o2title') || 'Offer 2');
   const o2base = gv('o2base');
   const o2bonusPct = gv('o2bonus');
   const o2equity = gv('o2equity');
