@@ -6,29 +6,30 @@
 <title>Comp Decoder — Free Salary Negotiation Tool</title>
 <meta name="description" content="Stop leaving money on the table. Comp Decoder analyzes your job offer, shows where you stand vs. market, and gives you word-for-word scripts to negotiate more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&family=Epilogue:wght@300;400;500;600;700;800;900&family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #060609;
-  --s1: #0d0d14;
-  --s2: #12121c;
-  --s3: #18182a;
-  --border: #1e1e2e;
-  --border2: #28283e;
+  --bg: #080706;
+  --s1: #0e0b07;
+  --s2: #130f09;
+  --s3: #1a1408;
+  --border: #2a1f14;
+  --border2: #3a2a1c;
   --accent: #7fffb2;
-  --accent2: #ff7f50;
-  --accent3: #7fa8ff;
-  --gold: #ffd166;
-  --red: #ff5577;
-  --text: #e2e2f0;
-  --text2: #8888aa;
-  --text3: #44445a;
+  --accent2: #e07840;
+  --accent3: #ffb074;
+  --gold: #e07840;
+  --red: #ff5e3a;
+  --text: #e8dfc8;
+  --text2: #a08060;
+  --text3: #604030;
   --mono: 'JetBrains Mono', monospace;
-  --serif: 'Instrument Serif', serif;
-  --display: 'Fraunces', serif;
-  --sans: 'Epilogue', sans-serif;
+  --btn:  'Oswald', sans-serif;
+  --serif: 'Syne', sans-serif;
+  --display: 'Bebas Neue', sans-serif;
+  --sans: 'Syne', sans-serif;
   --r: 4px;
-  --glow: 0 0 40px rgba(127,255,178,0.15);
+  --glow: 0 0 40px rgba(224,120,64,0.12);
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -252,7 +253,7 @@ select option { background:var(--s2); }
 .decode-btn {
   width:100%;padding:0.875rem;margin-top:1rem;
   background:var(--accent);color:#060609;border:none;
-  font-family:var(--sans);font-size:12px;font-weight:800;
+  font-family:var(--btn);font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
   letter-spacing:0.08em;text-transform:uppercase;
   border-radius:var(--r);cursor:pointer;transition:all 0.2s;
   position:relative;overflow:hidden;
@@ -527,8 +528,8 @@ select option { background:var(--s2); }
 .data-source {
   display:flex;align-items:center;gap:0.5rem;
   padding:0.6rem 0.875rem;
-  background:rgba(127,168,255,0.06);
-  border:1px solid rgba(127,168,255,0.15);
+  background:rgba(224,120,64,0.05);
+  border:1px solid rgba(224,120,64,0.15);
   border-radius:var(--r);margin-bottom:1rem;
   font-size:10px;color:var(--accent3);
 }
@@ -681,7 +682,7 @@ select option { background:var(--s2); }
 .offer2-inline.show { display:block; }
 .compare-btn {
   background:var(--accent3);color:#060609;border:none;
-  font-family:var(--sans);font-size:11px;font-weight:800;
+  font-family:var(--btn);font-size:13px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;
   padding:0.55rem 1rem;border-radius:var(--r);cursor:pointer;
   letter-spacing:0.06em;text-transform:uppercase;margin-top:0.6rem;
   transition:all 0.2s;
@@ -759,11 +760,109 @@ select option { background:var(--s2); }
 
 /* FOOTER */
 footer {
-  padding:1.5rem;text-align:center;
+  padding:1.25rem 2rem 1.25rem;
   border-top:1px solid var(--border);
   font-size:10px;color:var(--text3);
+  display:block;
 }
-footer a { color:var(--accent3);text-decoration:none; }
+footer a { color:var(--text2);text-decoration:underline;text-underline-offset:2px; }
+footer a:hover { color:var(--accent); }
+.footer-disclaimer {
+  max-width:780px;
+  margin:0 auto 1.25rem;
+  background:var(--s2);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:1.1rem 1.4rem;
+  text-align:left;
+  line-height:1.75;
+  color:var(--text2);
+  font-size:10px;
+}
+.footer-disclaimer strong {
+  display:block;
+  font-family:var(--btn);
+  font-size:11px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--text);
+  margin-bottom:0.6rem;
+}
+.footer-disclaimer .disc-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0.5rem 1.5rem;
+}
+@media(max-width:600px){
+  .footer-disclaimer .disc-grid { grid-template-columns:1fr; }
+}
+.disc-item {
+  display:flex;
+  gap:0.5rem;
+  align-items:flex-start;
+  padding:0.35rem 0;
+  border-bottom:1px solid var(--border);
+}
+.disc-item:last-child { border-bottom:none; }
+.disc-icon { flex-shrink:0;opacity:0.5;margin-top:1px; }
+.footer-byline {
+  font-size:10px;
+  color:var(--text3);
+  margin-top:0.75rem;
+}
+
+/* BRAND CHIPS — hero trust signal */
+.trust-chips {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  justify-content:center;
+  margin:1.25rem auto 0;
+  max-width:600px;
+}
+.trust-chip {
+  font-family:var(--sans);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:0.04em;
+  color:var(--text3);
+  border:1px solid var(--border);
+  border-radius:3px;
+  padding:4px 10px;
+  white-space:nowrap;
+  transition:border-color 0.15s,color 0.15s;
+}
+.trust-chip:hover { border-color:var(--border2);color:var(--text2); }
+
+/* ACCORDION FOOTER */
+.footer-acc-trigger {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  cursor:pointer;
+  padding:4px 2px;
+  user-select:none;
+  transition:opacity 0.15s;
+}
+.footer-acc-trigger:hover { opacity:0.75; }
+.footer-acc-body {
+  margin-top:10px;
+  border:1px solid var(--border);
+  border-radius:6px;
+  overflow:hidden;
+  font-size:10px;
+  color:var(--text2);
+  line-height:1.8;
+}
+.footer-acc-row {
+  padding:8px 14px;
+  border-bottom:1px solid var(--border);
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+}
+.footer-acc-row:last-child { border-bottom:none; }
+.footer-acc-row .row-icon { flex-shrink:0;opacity:0.55; }
 
 /* PRINT STYLES */
 @media print {
@@ -842,9 +941,11 @@ footer a { color:var(--accent3);text-decoration:none; }
 .btn-launch {
   background: var(--accent);
   color: var(--bg);
-  font-family: var(--sans);
-  font-size: 12px;
+  font-family: var(--btn);
+  font-size: 14px;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   padding: 0.6rem 1.25rem;
   border-radius: 6px;
   text-decoration: none;
@@ -914,8 +1015,8 @@ footer a { color:var(--accent3);text-decoration:none; }
 .landing-hero-sub {
   font-family: var(--serif);
   font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-  font-style: italic;
-  color: var(--text2);
+  font-style: normal;
+  color: var(--text);
   max-width: 550px;
   margin-bottom: 2.5rem;
 }
@@ -928,9 +1029,11 @@ footer a { color:var(--accent3);text-decoration:none; }
 .btn-primary {
   background: var(--accent);
   color: var(--bg);
-  font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 800;
+  font-family: var(--btn);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   padding: 1rem 2.5rem;
   border-radius: 8px;
   text-decoration: none;
@@ -1165,8 +1268,8 @@ footer a { color:var(--accent3);text-decoration:none; }
 .glossary-intro {
   font-family: var(--serif);
   font-size: 1.1rem;
-  font-style: italic;
-  color: var(--text2);
+  font-style: normal;
+  color: var(--text);
   margin-top: 1rem;
 }
 .glossary-grid {
@@ -1265,10 +1368,18 @@ footer a { color:var(--accent3);text-decoration:none; }
 <div class="landing-page active" id="page-home">
   <section class="landing-hero">
     <div class="landing-hero-eyebrow">Worker-First Salary Intelligence</div>
-    <h1>Stop leaving <span class="highlight">$20,000+</span> on the table</h1>
+    <h1>Stop leaving <span class="highlight">$20,000+</span> on the table<sup style="font-size:0.45em;vertical-align:super;opacity:0.6;font-family:var(--sans);font-weight:400">1</sup></h1>
     <p class="landing-hero-sub">Free compensation analysis that shows you exactly where you stand, what to ask for, and the exact words to say.</p>
     <div class="landing-hero-cta">
       <div class="btn-primary" onclick="showPage('tool')">Decode Your Offer — Free</div>
+    </div>
+    <div class="trust-chips">
+      <span class="trust-chip">⚖️ Not legal or financial advice</span>
+      <span class="trust-chip">🤖 AI output — verify before use</span>
+      <span class="trust-chip">📊 BLS data — annual, W-2 only</span>
+      <span class="trust-chip">🎯 Results not guaranteed</span>
+      <span class="trust-chip">🔍 U.S. private sector only</span>
+      <span class="trust-chip">🔒 No data stored</span>
     </div>
     <div class="landing-hero-stats">
       <div class="landing-hero-stat">
@@ -1315,7 +1426,7 @@ footer a { color:var(--accent3);text-decoration:none; }
         </div>
       </div>
 
-      <div style="margin:2rem auto 0;max-width:680px;background:rgba(99,102,241,0.07);border:1px solid rgba(99,102,241,0.2);border-radius:10px;padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:center;">
+      <div style="margin:2rem auto 0;max-width:680px;background:rgba(224,120,64,0.06);border:1px solid rgba(224,120,64,0.18);border-radius:10px;padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:center;">
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);white-space:nowrap;">Powered by</div>
         <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;font-size:0.8rem;opacity:0.8;white-space:nowrap;">🏛️ BLS Occupational Employment &amp; Wage Statistics</a>
         <span style="opacity:0.3">·</span>
@@ -1527,7 +1638,7 @@ footer a { color:var(--accent3);text-decoration:none; }
   <section class="landing-why-free">
     <div class="landing-why-free-inner">
       <h2>Why is this free?</h2>
-      <p>Research shows candidates routinely accept $20,000 or more below budget simply because they don't know how to ask. The information asymmetry in hiring is real — and it costs workers billions every year. Employers know the full band. You usually don't. This tool changes that.</p>
+      <p>Most candidates leave $20,000+ on the table<sup style="font-size:0.65em;vertical-align:super;opacity:0.6;font-family:var(--sans);font-weight:400">1</sup> — not because they lack skill, but because they lack data. Employers know exactly what the role pays. You're negotiating blind. This tool changes that.</p>
       <p>No paywalls. No email capture. No upsell to a "premium tier." No ads. The wage data powering this tool comes from the <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener" style="color:var(--accent)">U.S. Bureau of Labor Statistics</a> — a federal government source with no financial incentive to skew numbers in anyone's favor. That's the point.</p>
       <div style="margin:1.75rem auto;max-width:560px;background:rgba(127,255,178,0.04);border:1px solid rgba(127,255,178,0.12);border-radius:10px;padding:1.4rem 1.6rem;text-align:left">
         <div style="font-family:var(--display);font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:1rem;letter-spacing:0.01em">Your data stays yours.</div>
@@ -1539,7 +1650,7 @@ footer a { color:var(--accent3);text-decoration:none; }
           <li style="font-family:var(--serif);font-size:0.95rem;color:var(--text);line-height:1.5;display:flex;gap:0.75rem;align-items:flex-start"><span style="flex-shrink:0">🗑️</span><span>Close the tab and everything is gone</span></li>
         </ul>
       </div>
-      <div style="margin:1.5rem 0;padding:1rem 1.25rem;background:rgba(99,102,241,0.07);border:1px solid rgba(99,102,241,0.2);border-radius:8px;font-size:0.8rem;opacity:0.8;line-height:1.7">
+      <div style="margin:1.5rem 0;padding:1rem 1.25rem;background:rgba(224,120,64,0.06);border:1px solid rgba(224,120,64,0.18);border-radius:8px;font-size:0.8rem;opacity:0.8;line-height:1.7">
         <strong>Data sources:</strong>
         <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener" style="color:var(--accent)">BLS Occupational Employment &amp; Wage Statistics</a> ·
         <a href="https://www.careeronestop.org/toolkit/wages/find-salary.aspx" target="_blank" rel="noopener" style="color:var(--accent)">CareerOneStop / U.S. Dept of Labor</a> ·
@@ -1547,6 +1658,7 @@ footer a { color:var(--accent3);text-decoration:none; }
         <a href="https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/" target="_blank" rel="noopener" style="color:var(--accent)">OPM Federal Pay Tables</a> ·
         <a href="https://www.dol.gov/agencies/ofccp/pay-transparency" target="_blank" rel="noopener" style="color:var(--accent)">DOL Pay Transparency</a>
       </div>
+      <p style="font-size:0.72rem;color:var(--text3);line-height:1.6;margin-top:1.5rem;font-family:var(--sans)"><sup>1</sup> Based on an 18.83% average salary gain achieved by candidates who negotiate, applied to a $100,000 base offer. Source: Cullen, Z.B., Pakzad-Hurson, B., &amp; Perez-Truglia, R. (2025). <em>Pushing the Envelope: The Effects of Salary Negotiations.</em> National Bureau of Economic Research / Harvard Business School. <a href="https://anderson-review.ucla.edu/most-job-seekers-skip-negotiation-and-pay-a-high-price/" target="_blank" rel="noopener" style="color:var(--text3);text-decoration:underline">UCLA Anderson Review summary</a>.</p>
       <div class="signature">
         Built by <a href="https://linkedin.com/in/samirsaad" target="_blank" rel="noopener">Samir Saad</a> — SPHR · MS Human Resource Development · OD Practitioner
       </div>
@@ -2014,9 +2126,7 @@ footer a { color:var(--accent3);text-decoration:none; }
   </div>
 </div>
 
-<footer>
-  Built by <a href="https://github.com/samirsaad" target="_blank" rel="noopener">Samir Saad</a> · HR practitioner building thinking tools · <a href="https://linkedin.com/in/samirsaad" target="_blank" rel="noopener">LinkedIn</a>
-</footer>
+
 
 <script>
 // Safe HTML escaping to prevent XSS from user-entered text in innerHTML
@@ -2855,10 +2965,13 @@ function showPage(pageName) {
   
   // Toggle landing header visibility
   var landingHeader = document.getElementById('landing-header');
+  var siteFooter = document.getElementById('site-footer');
   if (pageName === 'tool') {
     landingHeader.style.display = 'none';
+    if (siteFooter) siteFooter.style.display = 'none';
   } else {
     landingHeader.style.display = 'flex';
+    if (siteFooter) siteFooter.style.display = 'block';
   }
   
   // Update nav link active states
@@ -2875,6 +2988,44 @@ function showPage(pageName) {
 </script>
 
 </div><!-- /page-tool -->
+
+<footer id="site-footer">
+  <div style="max-width:680px;margin:0 auto;text-align:center">
+
+    <!-- Accordion trigger — full width, centered content -->
+    <div class="footer-acc-trigger" onclick="(function(){var b=document.getElementById('footer-acc');var c=document.getElementById('footer-chev');var open=b.style.display!=='none';b.style.display=open?'none':'block';c.textContent=open?'▸':'▾';})()">
+      <div style="display:flex;align-items:center;gap:8px;justify-content:center;flex:1">
+        <div style="font-family:var(--display);font-size:13px;color:var(--text3);letter-spacing:0.06em">COMP DECODER</div>
+        <div style="width:1px;height:10px;background:var(--border);flex-shrink:0"></div>
+        <div style="font-family:var(--btn);font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text2)">⚠ Disclaimers &amp; Limitations</div>
+        <div style="width:1px;height:10px;background:var(--border);flex-shrink:0"></div>
+        <div style="display:flex;align-items:center;gap:4px;font-family:var(--sans);font-size:9px;color:var(--text3)">
+          <span>6 items</span>
+          <span id="footer-chev" style="font-size:10px">▸</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion body — hidden by default -->
+    <div id="footer-acc" style="display:none;margin-top:8px;text-align:left">
+      <div class="footer-acc-body">
+        <div class="footer-acc-row"><span class="row-icon">⚖️</span><span><strong style="color:var(--text)">Not professional advice.</strong> Comp Decoder is an informational tool only. Nothing here constitutes legal, financial, tax, or career counseling. Consult a qualified professional before making employment decisions.</span></div>
+        <div class="footer-acc-row"><span class="row-icon">🤖</span><span><strong style="color:var(--text)">AI content may be inaccurate.</strong> Negotiation scripts and coaching advice are AI-generated and may contain errors, outdated information, or suggestions unsuitable for your specific situation. Always verify before use.</span></div>
+        <div class="footer-acc-row"><span class="row-icon">📊</span><span><strong style="color:var(--text)">BLS data limitations.</strong> Wage benchmarks are sourced from the <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener" style="color:var(--accent)">BLS OEWS program</a>, updated annually each May. Excludes self-employed, contractors, gig workers, and unpaid family workers. Figures are survey estimates, not guarantees.</span></div>
+        <div class="footer-acc-row"><span class="row-icon">🎯</span><span><strong style="color:var(--text)">No guarantee of outcomes.</strong> Salary negotiation results depend on factors this tool cannot assess — employer budget constraints, internal equity bands, market conditions, recruiter discretion, and individual circumstance. Results will vary.</span></div>
+        <div class="footer-acc-row"><span class="row-icon">🔍</span><span><strong style="color:var(--text)">Scope limitations.</strong> Designed for U.S. private-sector W-2 employment. Not calibrated for federal GS pay scale, union-negotiated roles, private company equity with uncertain valuations, or international compensation.</span></div>
+        <div class="footer-acc-row"><span class="row-icon">🔒</span><span><strong style="color:var(--text)">No data stored.</strong> Inputs are not retained. The AI coach sends offer details to Anthropic's API to generate your response only — not retained after the call. Wage lookups send only your job title and state to the <a href="https://www.careeronestop.org/toolkit/wages/find-salary.aspx" target="_blank" rel="noopener" style="color:var(--accent)">CareerOneStop API</a>.</span></div>
+      </div>
+    </div>
+
+    <!-- Byline -->
+    <div class="footer-byline" style="margin-top:10px">
+      Built by <a href="https://linkedin.com/in/samirsaad" target="_blank" rel="noopener">Samir Saad</a> — SPHR · MS Human Resource Development · OD Practitioner &nbsp;·&nbsp;
+      <a href="https://github.com/SamirSaad786" target="_blank" rel="noopener">GitHub</a>
+    </div>
+
+  </div>
+</footer>
 
 </body>
 </html>
